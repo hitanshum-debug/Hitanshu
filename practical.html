@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h3>Working with loops</h3>
+
+    <p id="title"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+
+    <hr />
+
+    <h3>String methods</h3>
+
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <p id="result10"></p>
+    <p id="result11"></p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      let num = 0;
+      for (let i = 1; i <= 5; i++) {
+        num = num + i;
+        document.getElementById("title").innerHTML +=
+          "Each Sum values :" + i + "<br>";
+      }
+
+      document.getElementById(
+        "result1"
+      ).innerHTML = `the final sum is : ${num}`;
+
+      const car = ["BMW", "Audi", "TATA", "FORD"];
+      let len = car.length;
+      for (let i = 0; i < len; i++) {
+        document.getElementById("result2").innerHTML +=
+          "<br>" + "Car List :" + car[i] + "<br>";
+      }
+
+      let text = "Hitanshu Mehta";
+      let length = text.length;
+      document.getElementById("result3").innerHTML =
+        "String :" + text + " : Length of string : " + length;
+      document.getElementById("result4").innerHTML =
+        "String :" + text + " : character at 3 postion : " + text.charAt(3);
+
+      let text1 = "Ahmedabad";
+      let text2 = "Gujarat";
+      let finallength = text1.concat(" ", text2);
+
+      document.getElementById("result5").innerText =
+        "Concatenated String : " + finallength;
+
+      let text3 = "Apple, Banana, Kiwi";
+      let part1 = text3.slice(7, 13);
+      document.getElementById("result6").innerText = "Slice Method : " + part1;
+      let part2 = text3.slice(14);
+      document.getElementById("result7").innerText = "Slice Method : " + part2;
+      let part3 = text3.slice(-12);
+      document.getElementById("result8").innerText = "Slice Method : " + part3;
+
+      function myfunction(a, b) {
+        let c = a + b;
+        return c;
+      }
+
+      document.getElementById("result9").innerText =
+        "Function Result : " + myfunction(5, 10);
+
+      myFunction1 = (a, b) => a * b;
+      let result = myFunction1(4, 5);
+      document.getElementById("result10").innerHTML =
+        "The product is: " + result;
+
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+
+      let text4 = person.name + ", " + person.age + ", " + person.city;
+
+      document.getElementById("result11").innerHTML = text4;
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo1").innerHTML = fruits;
+
+      fruits.sort();
+      document.getElementById("demo2").innerHTML = fruits;
+    </script>
+    <!-- <script src="practical.js"></script> -->
+  </body>
+</html>
